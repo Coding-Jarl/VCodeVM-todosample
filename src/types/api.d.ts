@@ -1,7 +1,7 @@
 declare global {
   namespace API {
     type Task = {
-      id: number
+      id: string
       label: string
       status: 'done' | 'todo'
     }

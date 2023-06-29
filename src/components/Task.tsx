@@ -16,8 +16,15 @@ export default function Task({ data: { id, label, status } }: Props) {
 
   const cssClasses = clsx(styles.task, styles[currStatus])
   return (
-    <li className={cssClasses} onClick={hClick}>
-      {label}
+    <li className={cssClasses}>
+      <label>
+        <input
+          type="checkbox"
+          checked={currStatus === 'done'}
+          onChange={hClick}
+        />
+        {label}
+      </label>
     </li>
   )
 }
